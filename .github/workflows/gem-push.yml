@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     name: Build + Publish
+    needs: [lint, test]
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -16,10 +17,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Ruby 2.6
-    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-    # change this to (see https://github.com/ruby/setup-ruby#versioning):
-    # uses: ruby/setup-ruby@v1
+    - name: Set up Ruby 3.2
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.2

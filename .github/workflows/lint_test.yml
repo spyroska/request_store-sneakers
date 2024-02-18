@@ -6,7 +6,10 @@
 
 name: Ruby Lint and Test
 
-on: [pull_request]
+on: 
+  workflow_dispatch:
+  workflow_call:
+  pull_request:
 
 permissions:
   contents: read

@@ -1,14 +1,15 @@
-name: Ruby Gem
+name: Ruby Gem Build and Publish
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+    types:
+      - closed
 
 jobs:
   build:
-    name: Build + Publish
+    if: github.event.pull_request.merged
+    name: Build and Publish
     needs: [lint, test]
     runs-on: ubuntu-latest
     permissions:

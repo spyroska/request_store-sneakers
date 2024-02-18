@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Easily integrate RequestStore with sneakers as a middleware"
   spec.description   = "Provides a Sneakers Middleware to clear out RequestStore after each work is processed."
   spec.homepage      = "https://github.com/spyroska/request_store-sneakers"
-  spec.license       = 'MIT'
+  spec.license       = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.files         = Dir["lib/**/*"] + ["LICENSE.txt", "request_store-sneakers.gemspec"]
